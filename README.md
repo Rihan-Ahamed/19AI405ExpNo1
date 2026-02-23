@@ -86,4 +86,6 @@ while True:
 print("\n----------------------------------")
 print("Final Performance Score:", performance)
 print("Agent Stopped.")
-``` 
+```
+<H3>RESULT:</H3>
+<p>The Medicine Prescribing Agent successfully monitors two rooms, prescribes medicine when the patient’s temperature is greater than 98.5°F, updates performance based on treatment and movement, and continues execution until the user chooses to stop.</p>
