@@ -40,3 +40,50 @@
 <p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
 <h3>STEP 5:</h3>
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
+
+<h3>CODE:</h3>
+```
+import random
+
+# Initialize performance
+performance = 0
+
+# Randomly choose starting room
+current_room = random.choice(["Room A", "Room B"])
+
+print("Medicine Prescribing Agent Started")
+print("Starting in", current_room)
+print("----------------------------------")
+
+while True:
+    print("\nCurrently in", current_room)
+    
+    # Get temperature input
+    temp = float(input("Enter patient temperature in " + current_room + ": "))
+    
+    # Check patient condition
+    if temp > 98.5:
+        print("Patient is unhealthy. Prescribing medicine...")
+        performance += 1
+    else:
+        print("Patient is healthy. No treatment needed.")
+    
+    # Ask user if continue
+    choice = input("\nDo you want to continue? (yes/no): ").lower()
+    
+    if choice == "no":
+        break
+    
+    # Move to the other room
+    if current_room == "Room A":
+        current_room = "Room B"
+    else:
+        current_room = "Room A"
+    
+    print("Moving to", current_room)
+    performance -= 1  # movement cost
+
+print("\n----------------------------------")
+print("Final Performance Score:", performance)
+print("Agent Stopped.")
+``` 
