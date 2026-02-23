@@ -87,5 +87,8 @@ print("\n----------------------------------")
 print("Final Performance Score:", performance)
 print("Agent Stopped.")
 ```
+<H3>OUTPUT:</H3>
+<img width="509" height="697" alt="image" src="https://github.com/user-attachments/assets/c1eae5ba-d434-4a2e-8bb4-119030ec5bc8" />
+
 <H3>RESULT:</H3>
 <p>The Medicine Prescribing Agent successfully monitors two rooms, prescribes medicine when the patient’s temperature is greater than 98.5°F, updates performance based on treatment and movement, and continues execution until the user chooses to stop.</p>
